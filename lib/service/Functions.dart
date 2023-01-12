@@ -104,7 +104,8 @@ class FunctionClass {
       return result;
     } catch (e) {
       if (e.toString().split(" ")[0] == "DioError") {
-        setting.logToServer.add("analyzing : dioError 발생하여 재실행 : $e");
+        setting.logToServer.add(
+            "analyzing : dioError 발생하여 재실행 : ${e.toString().split(" ").sublist(0, 10)}");
         return getPrediction();
       } else if (e.toString().split(":")[0] == "FileSystemException") {
         throw "FileSystemException";
@@ -139,7 +140,10 @@ class FunctionClass {
 
       // 읽어오기에 성공했다면 원본 파일을 삭제하여 중복전송 방지
 
-      // 잘린 파일의 channel을 보니 두개이다! 왼쪽,오른쪽이라고 하는데 첫번째것만 남기기
+      // 샘플레이트보다 길이가 작으면 1초보다 짧다는 의미이므로 따로 분석 보내지 않고 바로 SignalException 던지기
+      if (readedFile.channels[0].length < readedFile.samplesPerSecond) {
+        throw SignalException;
+      }
 
       // 전체 길이 - samplesPerSecond부터 슬라이싱하면 마지막 1초간의 데이터만 남게 됨
       for (int i = 0; i < readedFile.channels.length; i++) {
