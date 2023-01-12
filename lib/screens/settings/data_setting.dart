@@ -72,7 +72,7 @@ class _DataSettingState extends State<DataSetting> {
           children: [
             Text(title, style: settingTitleStyle(darkMode ? kWhite : kBlack)),
             const Spacer(),
-            screen != null ? action : Text(version),
+            screen != null ? action : Text(version, style: TextStyle(color: kGrey5)),
           ],
         ),
       );
