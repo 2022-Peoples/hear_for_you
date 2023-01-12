@@ -497,7 +497,7 @@ class FunctionClass {
           );
         }
       } else {
-        if ( val == "null") {
+        if (val == "null") {
           val = '소리';
         }
         Toast.show('$val가 감지되었습니다.', duration: 5, gravity: Toast.bottom);
@@ -541,6 +541,12 @@ class FunctionClass {
           });
         }
       } else {
+        Toast.show('에러가 발생했습니다. 5초 뒤 상시모드가 다시 시작됩니다.',
+            duration: 5, gravity: Toast.bottom);
+        Timer(const Duration(seconds: 5), () {
+          context.read<RecordModule>().record();
+        });
+
         print("analyzing : 에러가 발생했습니다 : $error");
         logToServer.add("analyzing : 에러가 발생했습니다 : $error");
         FunctionClass.sendLogToServer();
