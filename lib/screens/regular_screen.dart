@@ -55,6 +55,13 @@ class RegularScreenState extends State<RegularScreen>
     animation.addListener(() {
       setState(() {});
     });
+
+    if (isInit) {
+      context.read<RecordModule>().initState();
+      if (regularValue) {
+        context.read<RecordModule>().record();
+      }
+    }
   }
 
   // 애니메이션 종료

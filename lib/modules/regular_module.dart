@@ -48,8 +48,8 @@ class RecordModule extends ChangeNotifier {
   }
 
   Future<void> openTheRecorder() async {
-    var status = await Permission.microphone.request();
-    if (status != PermissionStatus.granted) {
+    var status = await Permission.microphone.isGranted;
+    if (!status) {
       throw RecordingPermissionException('Microphone permission not granted');
     }
 

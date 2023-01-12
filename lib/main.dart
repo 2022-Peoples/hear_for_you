@@ -119,13 +119,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
     ToastContext().init(context);
 
-    if (isInit) {
-      context.read<RecordModule>().initState();
-      if (regularValue) {
-        context.read<RecordModule>().record();
-      }
-    }
-
     setState(() {});
   }
 

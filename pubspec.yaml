@@ -51,8 +51,8 @@ dependencies:
   # voice mode
   speech_to_text: ^6.1.0
   screenshot: ^1.2.3
-  image_gallery_saver: ^1.7.1
   toast: ^0.3.0
+  image_gallery_saver_v3: ^1.0.0
 
   # regular mode
   audio_session: ^0.1.13

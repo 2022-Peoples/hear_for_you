@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hear_for_you/widgets/custom_dialog.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_v3/image_gallery_saver.dart';
 import 'package:screenshot/screenshot.dart';
 
 import '../constants.dart';
