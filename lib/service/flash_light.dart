@@ -7,7 +7,7 @@ class FlashLight {
       const Duration(milliseconds: 500),
       (Timer timer) {
         cnt += 1;
-        if (cnt == 20) {
+        if (cnt == 10) {
           timer.cancel();
         }
         if (cnt % 2 == 0) {
