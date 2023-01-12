@@ -10,7 +10,7 @@ final notifications = FlutterLocalNotificationsPlugin();
 //1. 앱 로드시 initNotification을 등록해줘야 합니다!
 initNotification() async {
   //안드로이드용 아이콘파일 이름
-  var androidSetting = const AndroidInitializationSettings('ic_icon');
+  var androidSetting = const AndroidInitializationSettings('ic_notification');
 
   //ios에서 앱 로드시 유저에게 권한요청하려면
   var iosSetting = const DarwinInitializationSettings(

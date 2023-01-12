@@ -236,22 +236,22 @@ class RegularScreenState extends State<RegularScreen>
                             Container(
                               color: darkMode ? kBlack : kGrey1,
                               child: LoadingAnimationWidget.waveDots(
-                                color:
-                                    darkMode ? kWhite : const Color(0xFF434343),
-                                size: 30.0,
-                              ),
+                                  color: darkMode ? kWhite : kBlack,
+                                  size: 30.0),
                             ),
                             const SizedBox(height: 10),
                             Text(
                               '소리를 듣고 있습니다',
                               style: TextStyle(
-                                color:
-                                    darkMode ? kWhite : const Color(0xFF434343),
-                                fontSize: kXS,
-                              ),
+                                  color: darkMode ? kWhite : kBlack,
+                                  fontSize: kXS),
                             ),
                           ])
-                    : const Text('상시모드가 꺼져있습니다.'),
+                    : Text(
+                        '상시모드가 꺼져있습니다.',
+                        style: TextStyle(
+                            color: darkMode ? kWhite : kBlack, fontSize: kXS),
+                      ),
               ],
             ),
             // 4. 미확인 알림 팝업 자리

@@ -35,7 +35,7 @@ class MissedAlertState extends State<MissedAlert> {
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
 
-    Timer(const Duration(milliseconds: 50), () {
+    Timer(const Duration(milliseconds: 500), () {
       if (onScreen) {
         missedAlertNum = FunctionClass.logsToShown();
         logCount = FunctionClass.howManyLogsLeft();
