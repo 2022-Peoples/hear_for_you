@@ -195,7 +195,7 @@ class _SettingScreenState extends State<SettingScreen> {
                                 tooltip: "장애정도 설정 안내 보기",
                                 icon: Icon(
                                   Icons.help_rounded,
-                                  color: colorChart[7],
+                                  color: kMain,
                                   size: 20,
                                 ),
                                 padding:
