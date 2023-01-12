@@ -160,6 +160,7 @@ class _DataSettingState extends State<DataSetting> {
                               [true, true, true],
                               [true, true, true]
                             ];
+                            logList = [];
                             kMain = colorChart[selectedColor];
 
                             if (!mounted) return;
