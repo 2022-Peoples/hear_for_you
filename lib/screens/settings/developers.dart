@@ -69,7 +69,7 @@ class Developers extends StatelessWidget {
                             "#${desc[i]}",
                             style: TextStyle(
                                 fontSize: kS - 1,
-                                color: kBlack,
+                                color: darkMode ? kWhite : kBlack,
                                 fontFamily: 'PretendardLight'),
                           ),
                         );
