@@ -1,4 +1,4 @@
-package com.example.hear_for_you
+package com.peoples.hear_for_you
 
 import android.app.KeyguardManager
 import android.content.Context
