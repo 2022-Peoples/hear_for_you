@@ -100,11 +100,13 @@ class RecordModule extends ChangeNotifier {
     var isRepeating = false;
     debugPrint('debugging : 상시모드 on');
     isRecording = true;
+
     _recordTimer = Timer.periodic(const Duration(seconds: 5), (timer) async {
       debugPrint('debugging : recordTimer ${DateTime.now().second}');
       // 녹음 시작
       if (isRepeating) {
         mRecorder!.stopRecorder();
+        _recorderSubscription.cancel();
       }
       await mRecorder!.startRecorder(toFile: _mPath).then((value) async {
         notifyListeners();
