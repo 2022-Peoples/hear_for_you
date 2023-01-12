@@ -15,7 +15,7 @@ class PrivacyPolicy extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
           margin: const EdgeInsets.only(bottom: 50),
-          child: const Text(
+          child: Text(
               """< Peoples >('http://www.hearforyou.site'이하 '피플즈')은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
 
 ○ 이 개인정보처리방침은 2023년 1월 8부터 적용됩니다.
@@ -153,7 +153,7 @@ Peoples 은(는) 정보주체의 이용정보를 저장하고 수시로 불러�
 
 다만, 수집하는 개인정보의 항목, 이용목적의 변경 등과 같이 이용자 권리의 중대한 변경이 발생할 때에는 최소 30일 전에 미리 고지하겠습니다.
 
-공고일자 : 2023년 1월 8일"""),
+공고일자 : 2023년 1월 8일""", style: TextStyle(color: darkMode ? kWhite : kBlack, fontSize: kXS)),
         ),
       ),
     );
