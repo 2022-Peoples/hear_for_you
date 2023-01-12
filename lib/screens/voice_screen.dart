@@ -226,6 +226,7 @@ class _VoiceScreenState extends State<VoiceScreen> {
                                 right: 10, top: 10, bottom: 10),
                             child: TextButton(
                               onPressed: () {
+                                context.read<VoiceModule>().stopListening();
                                 showCupertinoModalPopup(
                                   context: context,
                                   builder: (BuildContext context) =>
