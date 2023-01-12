@@ -42,10 +42,6 @@ class RegularScreenState extends State<RegularScreen>
       PermissionCheckClass.AndroidAlertPermissionCheck(context);
       PermissionCheckClass.AndroidSystemAlertWindowPermissionCheck(context);
       PermissionCheckClass.AndroidMicPermissionCheck(context);
-      PermissionCheckClass.AndroidRecognitionPermissionCheck(context);
-      // // Mic, Recognition 체크
-      // PermissionCheckClass.AndroidMicPermissionCheck(context);
-      // PermissionCheckClass.AndroidRecognitionPermissionCheck(context);
     } else {
       // ios라면
       PermissionCheckClass.IOSAlertPermissionCheck(context);
