@@ -19,7 +19,7 @@ class DataSetting extends StatefulWidget {
 class _DataSettingState extends State<DataSetting> {
   @override
   Widget build(BuildContext context) {
-    String version = "1.0.0";
+    String version = "1.1.0";
 
     // 설정 타이틀의 스타일
     TextStyle settingTitleStyle(color) {
