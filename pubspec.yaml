@@ -76,6 +76,8 @@ dependencies:
       url: https://github.com/jja08111/plus_plugins.git
       path: packages/android_alarm_manager_plus
       ref: alarm_app
+  record: ^4.4.4
+  audioplayers: ^3.0.1
 
   
 dev_dependencies:
